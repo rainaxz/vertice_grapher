@@ -1,0 +1,42 @@
+Vertice Path Planning
+
+Authors
+    
+    Raina Zhang
+
+Project Description:
+
+    This project aims to assist a robot in navigating an environment with obstacles, represented as rectangles, by finding paths that avoids collisions. The robot is considered to be a single point. The main goal of the project is to construct a visibility graph, which is a reduced graph where vertices are the corners of the obstacles and edges are direct lines of sight that do not intersect any obstacles.
+
+    Given a set of rectangular obstacles in a 2D plane, the program onstructs a complete graph of all obstacle corners the removes all edges that intersect any obstacle to create a reduced visibility graph. The reduced visibility graph helps in efficiently finding the shortest path for the robot. This graph only contains edges that represent direct lines of sight between vertices that do not cross any obstacles.
+
+Files:
+
+    bigEnvironment.c 
+    plannerTester.c 
+    display.c 
+    pathPlanner.c 
+
+    display.h 
+    obstacles.h 
+    
+    makefile 
+    README
+
+Compile/Run: 
+
+    type 'make' to compile both plannerTester and bigEnvironment
+    run each one by typing ./[name of file]
+
+
+Notes
+
+    Each edge in the reduced visibility graph represents two directed edges (one in each direction).
+    The program currently does not compute the shortest path. It only constructs the visibility graph.
+
+Future Work
+
+    Implement pathfinding algorithms (like Dijkstra's or A* algorithm) to find the shortest path using the visibility graph.
+    Enhance the program to handle more complex shapes and larger environments.
+
+
